@@ -19,23 +19,23 @@
     <!-- animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <!-- 分頁icon -->
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/H.png" />
+    
+
     <style>
+        /* 導覽列定在最上面 */
         body{
             padding-top:101px ;
         }
 
-        .logo{
-            height:75px ;
-            /* 漸變0.5s */
-            transition: 0.5s;
-        }
-
-        .active{
-            height: 55px;
-        }
         .swiper-container {
             width: 100%;
-            height: 600px;
+            /* height: 500px; */
         }
         
         /* 把卡片的高度更改，因為卡片輪播也有用到swiper-container的class */
@@ -60,27 +60,23 @@
             height:100%;
             background-color:rgb(82, 119, 231);
         }
-        .slider-4  {
+
+        .slider-4 {
             width: 100%;
             height:100%;
-            
+
         }
         .slider-5 {
             width: 100%;
             height:100%;
-            
+
         }
 
         .slider-6 {
             width: 100%;
             height:100%;
-            
+
         }
-        #swiper-phonesize{
-            max-width:100%;
-            height:auto;
-        }
-        
 
         /* 可改變swiper的箭頭樣式 */
         /* .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
@@ -95,11 +91,8 @@
         #Card-swiper{
             padding: 0 49px;   
         }
-        .hsuan{
-            height:300px;
-        }
         
-        /* 螢幕尺寸小於1200時*/
+        /* 螢幕尺寸小魚1200時*/
         @media(max-width:1200px){
             #Card-swiper{
             padding: 0 30px;
@@ -121,18 +114,50 @@
             text-align: center;
 
         }
+
+        .logo{
+            height:75px ;
+            /* 漸變0.5s */
+            transition: 0.5s;
+        }
+        .active{
+            height: 55px;
+        }
+        @media(max-width:430px){
+            .logo{
+                height:40px ;
+            }
+        }
+        .hsuan{
+            height:300px;
+        }
+        @media(max-width:430px){
+            .hsuan{
+            height:100px ;
+            }
+        }
+        .introduce{
+            text-align: left;
+        }
+        @media(max-width:430px){
+            .introduce{
+                text-align: center;
+            }
+        }
+        
+
+        
+
     </style>
-    <title>Hello, world!</title>
+    <title>HSUAN</title>
 </head>
 
 <body>
     <!-- 導覽列 -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <!-- <img class="logo" src="http://104.244.122.169/~diylogodesigns/wp-content/uploads/2016/05/adidas-blue-logo-png-download.png"
-                    alt=""> -->
-                <img class="logo" src="img/正昌工業社去背.png" alt="">
+                <img class="logo" src="img/車干LOGO(去背).png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,25 +167,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#"><b>Home</b> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                        <a class="nav-link" id="introduce_P" href="#">
+                            <b>
+                                Introduce
+                            </b>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" id="Experience_P" href="#">
+                            <b>
+                                Experience
+                            </b>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " id="Skills_P" href="#">
+                            <b>
+                                Skills
+                            </b>
+                        </a>
                     </li>
                 </ul>
                 <!-- <form class="form-inline my-2 my-lg-0">
@@ -172,7 +200,7 @@
     </nav>
 
     <!-- Banner輪播 -->
-    <div class="swiper-container" id="Banner-swiper" >
+    <div class="swiper-container" id="Banner-swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -201,37 +229,105 @@
     <button id="btn">first page</button> -->
 
 
-
-
-
-    <!-- section 1 版本2 -->
-    <div id="section1" class="py-5">
+    <!-- Introduce -->
+    <div id="section" class="py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-xl-8">
+            <div class="col-12 col-md-5">
+                <h1>Introduce</h1>
+            </div>
+            <div class="row justify-content-center py-5">
+                <!-- <div class="col-12 col-xl-4">
                     <div class="py-5">
-                        <img class="hsuan" src=" img/HSUAN_circle.png" alt="">
-                        <h3 class="text-center text-justify animated infinite  rubberBand ">Title</h3>
-                        <div class="text-center">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, est? Quidem aperiam
-                            fugiat alias totam modi incidunt rerum, aut exercitationem saepe libero facere dignissimos.
-                            Molestias ut
-                            itaque voluptatum quas nesciunt?
+                        <img class="container hsuan" src=" img/HSUAN_circle.png" alt="">
+                        <h3 class="text-center text-justify py-2">陳立軒</h3>
+                        <div class="py-3 text-center">
+                            18歲像一張白紙，還在選擇色彩，30歲已經是色紙，沒辦法改變，但可以選擇拼貼，哪一部分要被人看見。 —張鈞甯
                         </div>
+                    </div>
+                </div> -->
+                <div class="col-5 col-md-5 ">
+                    <img class="hsuan" src="img/HSUAN_circle.png" alt="dog">
+                </div>
+                <div class="col-12 col-md-5">
+                    <h2 class="introduce py-2">Li-Hsuan Chen</h2>
+                    <div class="introduce py-1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;I am Li-Hsuan Chen, from Changhua County. The members of the family
+                        have father, mother and two
+                        sisters, and I am the youngest.Due to the busy work of parents, I have created my independent
+                        personality and have the courage to learn new things.
+
+                    </div>
+                    <div class="introduce py-1">
+                        <h6>E-mail:
+                            <a href="https://www.w3schools.com/Html/html_links.asp">ks895300@gmail.com</a>
+                        </h6>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Experience -->
+    <div id="section1" class="py-1">
+        <div class="container">
+            <div class="col-12 col-md-5">
+                <h1>Experience</h1>
+            </div>
+            <hr color="000000">
+            <div class="container">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;During my time at the university, I used to be a restaurant waiter. The job
+                    involved included: wine
+                    service, food, desktop, and maintenance of the venue. Under the guidance of the foreman, we have
+                    experienced many
+                    wedding banquets and understand the whole wedding banquet. We must work hard to complete the tasks
+                    for the foreman and
+                    the director. I don’t know where the locals will ask. Keeping a good mood when communicating with
+                    guests and
+                    understanding their needs, Ithink this is the most and most important thing I have learned in this
+                    job.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Skills -->
+    <div id="section2" class="py-5">
+        <div class="container">
+            <div class="col-12 col-md-5">
+                <h1>Skills</h1>
+            </div>
+            <hr color="000000">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <img class="w-100 " src="img/履歷Skills(四).png" alt="skills1">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="w-100" src="img/履歷Skills繪圖(二).png" alt="skills2">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
     <div id="section3" class="py-3">
-        <div class="container ">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-5" data-aos="fade-right">
+                <div class="col-12 col-md-5">
                     <img class="w-100" src="https://www.guidedogswa.com.au/wp-content/uploads/2016/01/20160420_PuppyRaising_3.jpg"
                         alt="dog">
                 </div>
-                <div class="col-12 col-md-5" data-aos="fade-right">
+                <div class="col-12 col-md-5">
                     <h1 class="text-left">Title</h1>
                     <div class="text-left">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste nobis laudantium, assumenda sit
@@ -246,7 +342,7 @@
     <div id="section4" class="py-3">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-5 order-2 order-md-1 " data-aos="fade-left">
+                <div class="col-12 col-md-5 order-2 order-md-1">
                     <h1 class="text-left">Title</h1>
                     <div class="text-left">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste nobis laudantium, assumenda sit
@@ -255,7 +351,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-5 order-1 order-md-2" data-aos="fade-left " data-aos-duration="2000">
+                <div class="col-12 col-md-5 order-1 order-md-2">
                     <img class="w-100" src="https://www.guidedogswa.com.au/wp-content/uploads/2016/01/20160420_PuppyRaising_3.jpg"
                         alt="dog">
                 </div>
@@ -352,7 +448,7 @@
             }
         });
 
-        // scroll 
+        // scroll
         $(window).scroll(function () {
             var scrollTop = $(window).scrollTop();
             console.log("scrollTop" + scrollTop);
@@ -364,6 +460,38 @@
                 $(".logo").removeClass("active");
             }
 
+        });
+
+
+
+
+        $(function () {
+            $("#introduce_P").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section").offset().top
+                }, "show");
+                return false;
+            });
+        });
+
+
+        $(function () {
+            $("#Experience_P").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section1").offset().top
+                }, "show");
+                return false;
+            });
+        });
+
+
+        $(function () {
+            $("#Skills_P").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section2").offset().top
+                }, "show");
+                return false;
+            });
         });
     </script>
 </body>
